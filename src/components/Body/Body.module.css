@@ -1,0 +1,13 @@
+.Body {
+    background-color: #ccc;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .Body {
+        display: block;
+    }
+}

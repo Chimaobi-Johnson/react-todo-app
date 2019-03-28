@@ -1,0 +1,26 @@
+.NavMenu {
+	height: auto;
+}
+
+.NavMenu ul li {
+	padding: 0 30px;
+	font-weight: bold;
+	opacity: 0.8;
+	list-style-type: none;
+	float: right;
+}
+
+.NavMenu ul li:hover,
+.NavMenu ul li:active,
+.NavMenu ul li.active {
+	color: green;
+	cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+	.NavMenu ul li {
+		display: none;
+	}
+}

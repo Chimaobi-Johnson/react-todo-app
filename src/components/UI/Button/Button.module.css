@@ -1,0 +1,26 @@
+.Button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5%;
+    cursor: pointer;
+    font: inherit;
+    outline: none;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.ButtonUp {
+    background-color: greenyellow;
+}
+
+.ButtonDown {
+    background-color: cyan;
+}
+
+.ButtonSave {
+    background-color: darkgreen;
+    color: white;
+}
