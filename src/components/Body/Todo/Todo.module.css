@@ -1,4 +1,5 @@
 .Todo {
     flex: 2;
-    background-color: #653230
+    background-color: #dadada;
+    overflow-y: scroll;
 }

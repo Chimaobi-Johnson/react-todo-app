@@ -5,6 +5,13 @@
     cursor: pointer;
     font: inherit;
     outline: none;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(115, 114, 114);
+    font-weight: bold;
+}
+
+.Button:hover {
+    box-shadow: 1px 3px 5px rgb(66, 66, 66);
 }
 
 .Button:disabled {
@@ -14,13 +21,15 @@
 
 .ButtonUp {
     background-color: greenyellow;
+    color: #191919;
 }
 
-.ButtonDown {
+/* .ButtonDown {
     background-color: cyan;
-}
+    color: #000;
+} */
 
 .ButtonSave {
-    background-color: darkgreen;
+    background-color: rgb(22, 114, 22);
     color: white;
 }

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import ListItem from '../../UI/ListItem/ListItem';
+import Title from '../../UI/Title/Title';
+
 import classes from './Todo.module.css';
+
 
 
 class Todo extends Component {
@@ -16,7 +20,7 @@ class Todo extends Component {
         if(this.props.todoCurrentID === null){
             if(this.props.todoUnsavedList) {
                 todoItem2 = this.props.todoUnsavedList.map(el => {
-                    return <p key={el.id}>{el.todoItem}</p>
+                    return <ListItem key={el.id}>{el.todoItem}</ListItem>
                 });
             }
         } else if(this.props.todoCurrentID) {
@@ -40,7 +44,7 @@ class Todo extends Component {
                  listitem2 = el.todoItems.map(item => {
                     return (
                                 <div key={item.id}>
-                                <p>{item.todoItem}</p>
+                                    <ListItem>{item.todoItem}</ListItem>
                                 </div>
                             ); 
                 });
@@ -51,7 +55,7 @@ class Todo extends Component {
 
         return (
             <div id="todo" className={classes.Todo}>
-                {displayID}
+                <Title>{displayID}</Title>
                 {todoItem2}
             </div>
         );

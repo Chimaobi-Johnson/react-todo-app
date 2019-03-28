@@ -1,0 +1,32 @@
+.Lists {
+    width: 95%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Item:hover {
+    color: rgb(48, 48, 48);
+}
+
+.Edit:hover {
+    color: green;
+}
+
+.Delete:hover {
+    color: red;
+}
+
+.Lists p span {
+    float: right;
+    padding-right: 10px;
+}
+
+.Lists p {
+   padding-top: 0px;
+}
+

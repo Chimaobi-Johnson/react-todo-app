@@ -1,9 +1,13 @@
 .Body {
-    background-color: #ccc;
+    background-color: #b1b1b1;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 5px;
+    box-shadow: 2px 3px 20px 15px #c7c7c7d3; 
 }
 
 @media (max-width: 600px) {

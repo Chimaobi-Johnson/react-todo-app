@@ -5,6 +5,7 @@ import Stats from '../../components/Body/Stats/Stats';
 import Aux from '../../hoc/Auxillary/Auxillary';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
+import * as classes from './TodoList.module.css';
 
 class TodoList extends Component {
     state = {
@@ -128,13 +129,13 @@ class TodoList extends Component {
 
     render () {
         let todoForm = <div>
-                          <input id="todoText" type="text" placeholder="Enter Task" />
+                          <input className={classes.Input} id="todoText" type="text" placeholder="Enter Task" />
                           <Button btnType="ButtonUp" clicked={this.addedItem}>ADD</Button>
                           <Button btnType="ButtonDown" clicked={this.removeAddingItemModal}>CANCEL</Button>
                         </div>
 
         let savingForm = <div>
-                        <input id="saveText" type="text" placeholder="Enter Todo Name" />
+                        <input className={classes.Input} id="saveText" type="text" placeholder="Enter Todo Name" />
                             <Button btnType="ButtonUp" clicked={this.saveTodoListHandler}>SAVE</Button>
                             <Button btnType="ButtonDown" clicked={this.removeSaveModalHandler}>CANCEL</Button>
                         </div>

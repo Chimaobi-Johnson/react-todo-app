@@ -1,4 +1,7 @@
 import React from 'react';
+import SavedList from '../../../components/UI/SavedList/SavedList';
+import Title from '../../UI/Title/Title';
+
 import classes from './Stats.module.css';
 
 const stats = (props) => {
@@ -6,11 +9,12 @@ const stats = (props) => {
     if(props.todoSaved) {
         const todoSaved = props.todoSaved;
         savedItems = todoSaved.map(el => {
-            return <p onClick={() => props.clicked(el.saveDate)} key={el.saveDate}>{el.saveName}</p>
+            return <SavedList clicked={() => props.clicked(el.saveDate)} key={el.saveDate}>{el.saveName}</SavedList>
         });
     }
     return (
         <div className={classes.Stats}>
+            <Title>Saved Lists</Title>
             {savedItems}
         </div>
     )
