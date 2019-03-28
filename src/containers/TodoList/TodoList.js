@@ -11,14 +11,10 @@ class TodoList extends Component {
         todoUnsaved: [],
         todoSaved: [],
         currentTodo: null,
-        displayTodo: null,
         addingItem: false,
         savingItem: false
     }
 
-    // componentDidUpdate () {
-    //     addedItem();
-    // }
     createNewTodoHandler = () => {
         let currentTodo = null;
         let todoUnsaved = [...this.state.todoUnsaved];
@@ -31,17 +27,12 @@ class TodoList extends Component {
         // Get Input data
         let inputData = document.getElementById('todoText').value;
 
-        // npm startUpdate Input Data in state
-
-        // Create An Obj with an inner obj inside
-
         let todoListUnsaved = [...this.state.todoUnsaved];
         let todoSaved = [...this.state.todoSaved];
         let currentID = this.state.currentTodo;
         let date = new Date();
         let inputObj = null;
         let listitem = null;
-        // let todoItem = null;
 
         if(inputData !== '') {
             
@@ -74,15 +65,10 @@ class TodoList extends Component {
             document.getElementById('todoText').value = '';
 
             this.setState({addingItem: false, todoUnsaved: todoListUnsaved, todoSaved: todoSaved});
-        
-            // UPDATE UI
-    
+            
     
             console.log(this.state);
         }
-
-
-
 
 
     removeAddingItemModal = () => {
@@ -96,18 +82,9 @@ class TodoList extends Component {
     }
 
     saveModalHandler = () => {
-        let saveText = document.getElementById('saveText').value;
-        let todoSaved = [...this.state.todoSaved];
         let currentTodo = this.state.currentTodo;
         if(currentTodo) {
-            todoSaved = todoSaved.map(el => {
-                if(currentTodo === el.saveDate) {
-                    el.saveName = saveText;
-                    // el.todoItems.push(...initialTodo);
-                    alert('SAVE SUCCESSFULL');
-                }
-                return el;
-            });
+            alert('SAVE SUCCESSFULL');
         }
         else {
             this.setState({savingItem: true});
@@ -124,7 +101,6 @@ class TodoList extends Component {
         let todoUnsaved = [...this.state.todoUnsaved]; // create new array
         let initialTodo = [...this.state.todoUnsaved];
         let currentTodo = this.state.currentTodo;
-        // let currentID = null;
         let date = new Date();
         let todoListObj;
         if(currentTodo === null) {
@@ -136,7 +112,6 @@ class TodoList extends Component {
             currentTodo = todoListObj.saveDate;
             todoListObj.todoItems = initialTodo;
             todoSaved.push(todoListObj);
-            // currentTodo = todoListObj.saveDate;
         }
 
             todoUnsaved.length = 0;
@@ -148,17 +123,7 @@ class TodoList extends Component {
 
     displaySavedItems = (itemID) => {
         let currentTodo = itemID;
-        // let todoSaved = [...this.state.todoSaved];
-        // let todoItem = null;
-        // let listitem = null;
-        // todoItem = todoSaved.map(el => {
-        //     if(currentTodo === el.saveDate) {
-        //         listitem = el;
-        //     }
-        //     return listitem;
-        // });
        this.setState({currentTodo: currentTodo});
-    
     }
 
     render () {
